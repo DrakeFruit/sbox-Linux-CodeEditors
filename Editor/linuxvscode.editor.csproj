@@ -44,7 +44,7 @@
 	<ItemGroup>
 		<ProjectReference Include="Z:\home\davidg\.local\share\Steam\steamapps\common\sbox\editor\ActionGraph\Code\actiongraph.csproj" />
 		<ProjectReference Include="Z:\home\davidg\.local\share\Steam\steamapps\common\sbox\editor\Hammer\Code\hammer.csproj" />
-		<ProjectReference Include="Z:\home\davidg\.local\share\Steam\steamapps\common\sbox\samples\sweeper\Libraries\drakefruit.linuxvscode\Code\linuxvscode.csproj" />
+		<ProjectReference Include="Z:\home\davidg\Documents\sbox-projects\bloodsigil\Libraries\drakefruit.linuxvscode\Code\linuxvscode.csproj" />
 		<ProjectReference Include="Z:\home\davidg\.local\share\Steam\steamapps\common\sbox\addons\tools\Code\Base Editor Library.csproj" />
 		<ProjectReference Include="Z:\home\davidg\.local\share\Steam\steamapps\common\sbox\editor\ShaderGraph\Code\shadergraph.csproj" />
 	</ItemGroup>

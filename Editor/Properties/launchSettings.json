@@ -3,7 +3,7 @@
     "Editor": {
       "commandName": "Executable",
       "executablePath": "Z:\\home\\davidg\\.local\\share\\steam\\steamapps\\common\\sbox\\sbox-dev.exe",
-      "commandLineArgs": "-project \u0022Z:\\home\\davidg\\.local\\share\\Steam\\steamapps\\common\\sbox\\samples\\sweeper\\Libraries\\drakefruit.linuxvscode\\linuxvscode.sbproj\u0022"
+      "commandLineArgs": "-project \u0022Z:\\home\\davidg\\Documents\\sbox-projects\\bloodsigil\\Libraries\\drakefruit.linuxvscode\\linuxvscode.sbproj\u0022"
     }
   }
 }

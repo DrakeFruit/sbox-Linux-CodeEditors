@@ -11,31 +11,13 @@ public class VSCodeLinux : ICodeEditor
 {
     private string VsCodePath = "/usr/bin/code";
 
-    public bool IsInstalled() 
-    {
-        if ( File.Exists( "/usr/bin/code" ) ) 
-        {
-            VsCodePath = "/usr/bin/code";
-            return true;
-        }
-        if ( File.Exists( "/usr/bin/code-oss" ) ) 
-        {
-            VsCodePath = "/usr/bin/code-oss";
-            return true;
-        }
-        if ( File.Exists( "/usr/bin/visual-studio-code-electron" ) ) 
-        {
-            VsCodePath = "/usr/bin/visual-studio-code-electron";
-            return true;
-        }
-        return false;
-    } 
+    public bool IsInstalled() => true;
 
     public void OpenFile( string path, int? line = null, int? column = null )
     {
         var sln = CodeEditor.FindSolutionFromPath( System.IO.Path.GetDirectoryName( path ) ).Replace( "Z:\\", "/" ).Replace( "\\", "/" );
         var rootPath = Path.GetDirectoryName( sln ).Replace( "Z:\\", "/" ).Replace( "\\", "/" );
-        path = path.Replace( "Z:\\", "/" ).Replace( "\\", "/" );
+        path = path.Replace( "Z:\\", "/" ).Replace( "\\", "/" ).Replace( "code", "Code" );
 
         var args = $"--host {VsCodePath} -g \"{path}:{line}:{column}\" \"{rootPath}\"";
         Launch( args );

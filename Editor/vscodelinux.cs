@@ -6,10 +6,9 @@ using Editor;
 
 namespace Editor.CodeEditors;
 
-[Title( "VS Code (Linux Bridge)" )]
+[Title( "VS Code - Linux" )]
 public class VSCodeLinux : ICodeEditor
 {
-    private const string Bridge = "/usr/bin/flatpak-spawn";
     private const string VsCodePath = "/usr/bin/visual-studio-code-electron";
 
     public bool IsInstalled() => true; 
@@ -40,24 +39,13 @@ public class VSCodeLinux : ICodeEditor
 
     private static void Launch( string arguments )
     {
-        Log.Info( $"VS Code Linux: Spawning on host: {arguments}" );
-
-        try 
+        // never heard of flatpak-spawn but gemini told me to and it works so fuck it
+        System.Diagnostics.Process.Start( new System.Diagnostics.ProcessStartInfo
         {
-            // never heard of flatpak-spawn but gemini told me to and it works so fuck it
-            System.Diagnostics.Process.Start( new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = Bridge,
-                Arguments = arguments,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            } );
-        }
-        catch ( Exception e )
-        {
-            //never actually tried this, ai slop code here
-            Log.Warning( $"Bridge failed: {e.Message}. Trying direct shell..." );
-            System.Diagnostics.Process.Start( "/bin/sh", $"-c \"{VsCodePath} {arguments.Replace("--host " + VsCodePath, "")}\"" );
-        }
+            FileName = "/usr/bin/flatpak-spawn",
+            Arguments = arguments,
+            UseShellExecute = false,
+            CreateNoWindow = true
+        } );
     }
 }

@@ -2,8 +2,8 @@
   "profiles": {
     "Editor": {
       "commandName": "Executable",
-      "executablePath": "Z:\\home\\davidg\\.local\\share\\steam\\steamapps\\common\\sbox\\sbox-dev.exe",
-      "commandLineArgs": "-project \u0022Z:\\home\\davidg\\Documents\\sbox-projects\\bloodsigil\\Libraries\\drakefruit.linuxvscode\\linuxvscode.sbproj\u0022"
+      "executablePath": "../../../../SteamLibrary/steamapps/common/sbox/sbox-dev.exe",
+      "commandLineArgs": "-project \u0022Z:\\mnt\\blue\\S\u0026Box Projects\\sbox-Linux-CodeEditors\\linuxvscode.sbproj\u0022"
     }
   }
 }
